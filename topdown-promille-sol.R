@@ -74,6 +74,7 @@ compute_total_body_water <- function(age, sex, height, weight) {
 
 
 tell_me_how_drunk <- function(age, sex = c("male", "female"), height, weight, drinking_time, drinks) {
+  
   sex <- match.arg(tolower(sex), c("female", "male"))
   drinks <- unlist(drinks) # for allowing list or vector as input
 
